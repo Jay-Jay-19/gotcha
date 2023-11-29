@@ -15,49 +15,49 @@ const FeaturedRow = ({ id, title, description }) => {
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
 
       <ScrollView
-      horizontal
-      contentContainerStyle={{
-        paddingHorizontal: 15,
-      }}
-      showsHorizontalScrollIndicator={false}
-      className="pt-4"
+        horizontal
+        contentContainerStyle={{
+          paddingHorizontal: 15,
+        }}
+        showsHorizontalScrollIndicator={false}
+        className="pt-4"
       >
         {/* RestaurantCards... */}
         <RestaurantCard
-            id={123}
-            imgUrl="https://asiankitchen.fr/wp-content/uploads/2022/11/sushi-768x512.jpg"
-            title="Hokkaido Sushi"
-            rating={4.5}
-            genre="Japonais"
-            address="45 rue du Poteau"
-            short_description="This is a test description"
-            dishes={[]}
-            long={20}
-            lat={0}
+          id={123}
+          imgUrl="https://asiankitchen.fr/wp-content/uploads/2022/11/sushi-768x512.jpg"
+          title="Hokkaido Sushi"
+          rating={4.5}
+          genre="Japonais"
+          address="45 rue du Poteau"
+          short_description="This is a test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
         <RestaurantCard
-            id={123}
-            imgUrl="https://asiankitchen.fr/wp-content/uploads/2022/11/sushi-768x512.jpg"
-            title="Hokkaido Sushi"
-            rating={4.5}
-            genre="Japonais"
-            address="45 rue du Poteau"
-            short_description="This is a test description"
-            dishes={[]}
-            long={20}
-            lat={0}
+          id={123}
+          imgUrl="https://asiankitchen.fr/wp-content/uploads/2022/11/sushi-768x512.jpg"
+          title="Hokkaido Sushi"
+          rating={4.5}
+          genre="Japonais"
+          address="45 rue du Poteau"
+          short_description="This is a test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
         <RestaurantCard
-            id={123}
-            imgUrl="https://asiankitchen.fr/wp-content/uploads/2022/11/sushi-768x512.jpg"
-            title="Hokkaido Sushi"
-            rating={4.5}
-            genre="Japonais"
-            address="45 rue du Poteau"
-            short_description="This is a test description"
-            dishes={[]}
-            long={20}
-            lat={0}
+          id={123}
+          imgUrl="https://asiankitchen.fr/wp-content/uploads/2022/11/sushi-768x512.jpg"
+          title="Hokkaido Sushi"
+          rating={4.5}
+          genre="Japonais"
+          address="45 rue du Poteau"
+          short_description="This is a test description"
+          dishes={[]}
+          long={20}
+          lat={0}
         />
 
       </ScrollView>
