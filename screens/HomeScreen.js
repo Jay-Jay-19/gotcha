@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { UserIcon, ChevronDownIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon } from 'react-native-heroicons/outline';
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
-import SanityClient from '../sanity';
+import client from '../sanity';
 
 const HomeScreen = () => {
 
@@ -19,7 +19,24 @@ const HomeScreen = () => {
   }, []);
 
   useEffect(() => {
-    SanityClient.fetch
+    client
+      .fetch(
+        `
+        *[_type == "featured"]{
+          ...,
+          restaurants[]->{
+            ...,
+            dishes[]->,
+              type->{
+                name
+              }
+          },
+        }
+        `
+      )
+      .then((data) => {
+        setFeaturedCategories(data);
+      });
   }, []);
 
   return (
@@ -67,30 +84,19 @@ const HomeScreen = () => {
         <Categories />
 
         {/* À la une */}
-        <FeaturedRow
-          id="123"
-          title="À la une"
-          description="Placements produits pour les partenaires"
-        />
-
-        {/* Délicieuses Promos */}
-        <FeaturedRow
-          id="1234"
-          title="Délicieuses Promos"
-          description="Des promos pour tous les goûts !"
-        />
-
-        {/* Offres près de chez vous */}
-        <FeaturedRow
-          id="12345"
-          title="Offres près de chez vous"
-          description="Supportez les commerçants de votre quartier !"
-        />
+        {featuredCategories?.map((category) => (
+          <FeaturedRow
+            key={category._id}
+            id={category._id}
+            title={category.name}
+            description={category.short_description}
+          />
+        ))}
 
       </ScrollView>
 
     </SafeAreaView>
-  )
-}
+  );
+};
 
 export default HomeScreen;
