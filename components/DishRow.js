@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { urlFor } from '../sanity';
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToBasket, selectBasketItems, selectBasketItemsWithId } from '../features/basketSlice';
+import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWithId } from '../features/basketSlice';
 
 const DishRow = ({ id, name, description, price, image }) => {
 
@@ -16,7 +16,11 @@ const DishRow = ({ id, name, description, price, image }) => {
     dispatch(addToBasket({ id, name, description, price, image }));
   };
 
-  console.log(items);
+  const removeItemFromBasket = () => {
+    if (!items.length > 0) return;
+
+    dispatch(removeFromBasket({ id }));
+  };
 
   return (
     <>
@@ -48,8 +52,12 @@ const DishRow = ({ id, name, description, price, image }) => {
       {isPressed && (
         <View className="bg-white px-4">
           <View className="flex-row items-center space-x-2 pb-3">
-            <TouchableOpacity>
-              <MinusCircleIcon color="#ffde59" size={40} />
+            <TouchableOpacity
+              disabled={!items.length}
+              onPress={removeItemFromBasket}>
+              <MinusCircleIcon
+                color={items.length > 0 ? "#ffde59" : "gray"}
+                size={40} />
             </TouchableOpacity>
 
             <Text>{items.length}</Text>
