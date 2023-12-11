@@ -1,26 +1,36 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import Currency from 'react-currency-formatter';
+//import Currency from 'react-currency-formatter';
 import React, { useState } from 'react';
 import { urlFor } from '../sanity';
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToBasket, selectBasketItems, selectBasketItemsWithId } from '../features/basketSlice';
 
 const DishRow = ({ id, name, description, price, image }) => {
 
   const [isPressed, setIsPressed] = useState(false);
+  const items = useSelector((state) => selectBasketItemsWithId(state, id));
+  const dispatch = useDispatch();
+
+  const addItemToBasket = () => {
+    dispatch(addToBasket({ id, name, description, price, image }));
+  };
+
+  console.log(items);
 
   return (
     <>
       <TouchableOpacity
         onPress={() => setIsPressed(!isPressed)}
-        className="bg-white border p-4 border-gray-200"
+        className={`bg-white border p-4 border-gray-200 ${isPressed && "border-b-0"}`}
       >
         <View className="flex-row">
             <View className="flex-1 pr-2">
               <Text className="text-lg mb-1" >{name}</Text>
               <Text className="text-gray-400">{description}</Text>
-              <Text className="text-gray-400 mt-2">
+              {/* <Text className="text-gray-400 mt-2">
                 <Currency quantity={price} currency="EUR" />
-              </Text>
+              </Text> */}
             </View>
           <View>
             <Image
@@ -42,9 +52,9 @@ const DishRow = ({ id, name, description, price, image }) => {
               <MinusCircleIcon color="#ffde59" size={40} />
             </TouchableOpacity>
 
-            <Text>0</Text>
+            <Text>{items.length}</Text>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={addItemToBasket}>
               <PlusCircleIcon color="#ffde59" size={40} /> 
             </TouchableOpacity>
           </View>
