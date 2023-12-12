@@ -1,5 +1,4 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-//import Currency from 'react-currency-formatter';
 import React, { useState } from 'react';
 import { urlFor } from '../sanity';
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid';
@@ -17,6 +16,7 @@ const DishRow = ({ id, name, description, price, image }) => {
   };
 
   const removeItemFromBasket = () => {
+
     if (!items.length > 0) return;
 
     dispatch(removeFromBasket({ id }));
@@ -34,7 +34,6 @@ const DishRow = ({ id, name, description, price, image }) => {
               <Text className="text-gray-400">{description}</Text>
               <Text className="text-gray-400 mt-2">
                 {Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(price)}
-                {/* <Currency quantity={price} currency="EUR" /> */}
               </Text>
             </View>
           <View>
@@ -55,9 +54,10 @@ const DishRow = ({ id, name, description, price, image }) => {
           <View className="flex-row items-center space-x-2 pb-3">
             <TouchableOpacity
               disabled={!items.length}
-              onPress={removeItemFromBasket}>
+              onPress={removeItemFromBasket}
+            >
               <MinusCircleIcon
-                color={items.length > 0 ? "#ffde59" : "gray"}
+                color={items.length > 0 ? "#ffde59" : "lightgray"}
                 size={40} />
             </TouchableOpacity>
 
