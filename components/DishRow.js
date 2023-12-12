@@ -32,9 +32,10 @@ const DishRow = ({ id, name, description, price, image }) => {
             <View className="flex-1 pr-2">
               <Text className="text-lg mb-1" >{name}</Text>
               <Text className="text-gray-400">{description}</Text>
-              {/* <Text className="text-gray-400 mt-2">
-                <Currency quantity={price} currency="EUR" />
-              </Text> */}
+              <Text className="text-gray-400 mt-2">
+                {Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(price)}
+                {/* <Currency quantity={price} currency="EUR" /> */}
+              </Text>
             </View>
           <View>
             <Image
