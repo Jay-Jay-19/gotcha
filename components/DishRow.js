@@ -7,6 +7,8 @@ import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWith
 
 const DishRow = ({ id, name, description, price, image }) => {
 
+  console.log(name);
+  console.log(id);
   const [isPressed, setIsPressed] = useState(false);
   const items = useSelector((state) => selectBasketItemsWithId(state, id));
   const dispatch = useDispatch();
