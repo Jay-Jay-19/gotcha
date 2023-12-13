@@ -7,6 +7,7 @@ import HomeScreen from './screens/HomeScreen.js';
 import RestaurantScreen from './screens/RestaurantScreen.js';
 import BasketScreen from './screens/BasketScreen.js';
 import PreparingOrderScreen from './screens/PreparingOrderScreen.js';
+import DeliveryScreen from './screens/DeliveryScreen.js';
 import { Provider } from 'react-redux';
 import { store } from './store.js';
 
@@ -35,6 +36,12 @@ export default function App() {
             <Stack.Screen
               name='PreparingOrder'
               component={PreparingOrderScreen}
+              options={{ presentation: 'fullScreenModal', headerShown: false }}
+            />
+
+            <Stack.Screen
+              name='Delivery'
+              component={DeliveryScreen}
               options={{ presentation: 'fullScreenModal', headerShown: false }}
             />
           </Stack.Navigator>
