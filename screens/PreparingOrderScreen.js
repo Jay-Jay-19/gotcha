@@ -13,7 +13,7 @@ const PreparingOrderScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate("Delivery");
-    }, 5000);
+    }, 6000);
   }, []);
 
   const loaderAnimation = require("../assets/loaderAnimation.json");
@@ -25,7 +25,7 @@ const PreparingOrderScreen = () => {
         source={require("../assets/orderLoading.gif")}
         animation="slideInUp"
         iterationCount={1}
-        className="h-96 w-96"
+        className="h-72 w-96"
       />
 
       <Animatable.Text
