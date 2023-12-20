@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ff3131"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,9 +20,15 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "splash": {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ff3131"
+        },
+        "package": "com.gotcha.maps"
       },
-      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"]
+      "googleMapsApiKey": "AIzaSyCo_ny1I0N3ltzJCGUwzPWnupEvKNKkX5s"
     },
     "web": {
       "favicon": "./assets/favicon.png"
