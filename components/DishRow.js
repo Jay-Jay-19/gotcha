@@ -9,6 +9,8 @@ const DishRow = ({ id, name, description, price, image }) => {
 
   console.log(name);
   console.log(id);
+  console.log(price);
+  console.log(description);
   const [isPressed, setIsPressed] = useState(false);
   const items = useSelector((state) => selectBasketItemsWithId(state, id));
   const dispatch = useDispatch();

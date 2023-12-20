@@ -48,7 +48,7 @@ const BasketScreen = () => {
 
         <View className="flex-row items-center space-x-4 px-4 py-3 bg-white my-5">
           <Image
-            source={require("./gotcha_logo.png")}
+            source={require("../assets/gotcha_logo.png")}
             className='h-10 w-10 p-4 rounded-full'
           />
           <Text className="flex-1">Livré dans 30 à 45 min</Text>

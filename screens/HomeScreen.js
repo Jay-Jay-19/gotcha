@@ -12,12 +12,17 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
 
+  // Le hook "useLayoutEffect" éxecute du code au moment où l'UI de cette page est chargée.
   useLayoutEffect(() => {
+    // Permet de modifier des éléments qui apparaissent par défaut.
     navigation.setOptions({
+      // On enlève l'affichage du Header qui existait par défaut.
       headerShown: false,
     });
   }, []);
 
+  // Le hook "useEffect" éxecute du code au moment où le composant fonctionnel est chargé (ce qui est différent de l'UI).
+  // Ici, au moment du chargement de la page, on lui dit de se connecter au backend Sanity et d'exécuter la requête.
   useEffect(() => {
     client
       .fetch(
@@ -26,10 +31,7 @@ const HomeScreen = () => {
           ...,
           restaurants[]->{
             ...,
-            dishes[]->,
-              type->{
-                name
-              }
+            dishes[]->
           },
         }
         `
@@ -43,15 +45,14 @@ const HomeScreen = () => {
     <SafeAreaView className="bg-white pt-5">
       
       {/* Header */}
-
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image
-          source={require("./gotcha_logo.png")}
+          source={require("../assets/gotcha_logo.png")}
           className='h-10 w-10 p-4 rounded-full'
         />
         <View className="flex-1">
           <Text className="font-bold text-gray-400 text-xs">Livraison immédiate</Text>
-          <Text className="font-bold text-xl">Position actuelle<ChevronDownIcon size={20} color="#004aad" />
+          <Text className="font-bold text-xl">Position actuelle <ChevronDownIcon size={20} color="#004aad" />
           </Text>
         </View>
 
