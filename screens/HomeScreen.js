@@ -21,7 +21,7 @@ const HomeScreen = () => {
     });
   }, []);
 
-  // Le hook "useEffect" éxecute du code au moment où le composant fonctionnel est chargé (ce qui est différent de l'UI).
+  // Le hook "useEffect" éxecute du code au moment où le composant fonctionnel (ce qui est différent de l'UI) est chargé.
   // Ici, au moment du chargement de la page, on lui dit de se connecter au backend Sanity et d'exécuter la requête.
   useEffect(() => {
     client
@@ -36,6 +36,7 @@ const HomeScreen = () => {
         }
         `
       )
+      // les données retournées vont servir à renseigner les sections "Offres près de chez vous, À la une, Délicieuses promos"
       .then((data) => {
         setFeaturedCategories(data);
       });
@@ -84,7 +85,7 @@ const HomeScreen = () => {
         {/* Categories */}
         <Categories />
 
-        {/* À la une */}
+        {/* Offres près de chez vous, À la une, Délicieuses promos */}
         {featuredCategories?.map((category) => (
           <FeaturedRow
             key={category._id}

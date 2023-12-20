@@ -14,6 +14,8 @@ const RestaurantScreen = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
 
+  // La fonction useRoute() de react-navigation nous permet de récupérer les infos qui ont été passées en paramètres
+  // dans la restaurant card au moment où on clique sur celle-ci.
   const {
     params: {
       id,
@@ -111,17 +113,18 @@ const RestaurantScreen = () => {
             <DishRow
               key={dish._id}
               dish={dish._id}
+              id={dish._id}
               name={dish.name}
               description={dish.short_description}
               price={dish.price}
               image={dish.image}
             />
-          ))};
+          ))}
         </View>
       </ScrollView>
 
     </>
-  );
+  )
 };
 
 export default RestaurantScreen;

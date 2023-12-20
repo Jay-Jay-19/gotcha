@@ -23,6 +23,9 @@ const RestaurantCard = ({
   return (
     <TouchableOpacity
     onPress={() => {
+      // Méthode qui permet de naviguer vers la page du "Restaurant" lorsqu'on clique sur la carte du restaurant.
+      // En même temps, on fait passer les infos ID, imgURl, title, genre, etc... qui seront récupérées dans 
+      // la page du restaurant grâce à la fonction UseRoute() de react-navigation.
       navigation.navigate('Restaurant', {
         id,
         imgUrl,
