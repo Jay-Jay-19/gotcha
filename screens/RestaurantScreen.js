@@ -31,6 +31,8 @@ const RestaurantScreen = () => {
     },
   } = useRoute();
 
+  // Le hook "useEffect" éxecute du code au moment où le composant fonctionnel (ce qui est différent de l'UI) est chargé.
+  // Ici, au moment du chargement de la page, on capture toutes les infos du restaurant pour les mettre dans le store.
   useEffect(() => {
     dispatch(
       setRestaurant({
@@ -70,9 +72,9 @@ const RestaurantScreen = () => {
 
           <TouchableOpacity
             onPress={navigation.goBack}
-            className="absolute top-14 left-5 p-2 bg-red-500 rounded-full"
+            className="absolute top-14 left-5 p-2 bg-white rounded-full"
           >
-            <ArrowLeftIcon size={20} color="#004aad" />
+            <ArrowLeftIcon size={20} color="#ff3131" />
           </TouchableOpacity>
         </View>
         

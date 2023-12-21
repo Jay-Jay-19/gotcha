@@ -7,16 +7,26 @@ import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWith
 
 const DishRow = ({ id, name, description, price, image }) => {
 
+  // Ce hook va nous permettre de faire apparaitre les icones + et - pour commander le plat lorsque qu'on
+  // cliquera sur le plat.
   const [isPressed, setIsPressed] = useState(false);
+
+  // Fonction qui permet de sélectionner les items du panier grâce à la fonction selectBasketItemsWithId
+  // crée dans le slice Basket.
   const items = useSelector((state) => selectBasketItemsWithId(state, id));
+
   const dispatch = useDispatch();
 
+  // Fonction pour activer la fonction addToBasket crée dans le slice Basket et mettre à jour le store.
+  // La fonction addToBasket aura en paramètres le payload, c'est-à-dire les infos qu'on veut faire passer et monitorer
   const addItemToBasket = () => {
     dispatch(addToBasket({ id, name, description, price, image }));
   };
 
   const removeItemFromBasket = () => {
 
+    // Si le panier ne contient aucun article, le code s'arrête ici, donc pas de possibilité de supprimer un item.
+    // Bref, si le compteur d'item est à 0, appuyer sur le bouton "-" ne fera rien.
     if (!items.length > 0) return;
 
     dispatch(removeFromBasket({ id }));

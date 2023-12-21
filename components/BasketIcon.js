@@ -5,10 +5,15 @@ import { selectBasketItems, selectBasketTotal } from '../features/basketSlice';
 import { useNavigation } from '@react-navigation/native';
 
 const BasketIcon = () => {
+  // Fonction qui permet d'accéder à la fonction SelectBasketItems crée dans le slice Basket. Bref, pour avoir les items du panier.
   const items = useSelector(selectBasketItems);
+
   const navigation = useNavigation();
+
+  // Fonction qui permet d'accéder à la fonction SelectBasketTotal crée dans le slice Basket pour avoir le total du panier.
   const basketTotal = useSelector(selectBasketTotal);
 
+  // Si pas d'item dans le panier, ce composant n'apparaît pas.
   if (items.length === 0) return null;
 
   return (

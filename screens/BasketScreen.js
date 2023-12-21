@@ -5,15 +5,21 @@ import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
 import { selectBasketItems, selectBasketTotal } from '../features/basketSlice';
-import { XCircleIcon } from 'react-native-heroicons/solid';
+import { ArrowLeftIcon } from 'react-native-heroicons/solid';
 import { urlFor } from '../sanity';
 import { removeFromBasket } from '../features/basketSlice';
 
 const BasketScreen = () => {
   
   const navigation = useNavigation();
+
+  // Fonction qui permet de récupérer les infos du restaurant dans le store grâce à la fonction selectRestaurant
+  // crée dans le slice Restaurant.
   const restaurant = useSelector(selectRestaurant);
+
+  // Fonction qui permet d'accéder à la fonction SelectBasketItems crée dans le slice Basket. Bref, pour avoir les items du panier.
   const items = useSelector(selectBasketItems);
+
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
   const dispatch = useDispatch();
   const basketTotal = useSelector(selectBasketTotal);
@@ -40,9 +46,9 @@ const BasketScreen = () => {
 
           <TouchableOpacity
           onPress={navigation.goBack}
-          className="rounded-full absolute top-3 right-5"
+          className="rounded-full absolute top-4 left-4"
           >
-            <XCircleIcon color="#004aad" height={35} width={35}/>
+            <ArrowLeftIcon color="#ff3131" size={20}/>
           </TouchableOpacity>
         </View>
 

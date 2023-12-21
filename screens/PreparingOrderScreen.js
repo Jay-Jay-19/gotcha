@@ -13,7 +13,7 @@ const PreparingOrderScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate("Delivery");
-    }, 6000);
+    }, 7000);
   }, []);
 
   const loaderAnimation = require("../assets/loaderAnimation.json");

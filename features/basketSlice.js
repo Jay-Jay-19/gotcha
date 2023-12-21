@@ -31,11 +31,17 @@ export const basketSlice = createSlice({
 
 export const { addToBasket, removeFromBasket } = basketSlice.actions;
 
+// Création d'un sélecteur qui permet d'accéder au store et prendre les infos contenues dans un slice.
+// Ici on veut récupérer les items du slice "Basket", donc les items du panier.
 export const selectBasketItems = (state) => state.basket.items;
 
+// Création d'un sélecteur qui permet d'accéder au store et prendre les infos contenues dans un slice.
+// Ici on veut récupérer les items du slice "Basket" dont l'ID correspond à celui qu'on spécifie.
 export const selectBasketItemsWithId = (state, id) => 
   state.basket.items.filter((item) => item.id === id);
 
+// Ce sélecteur permet d'avoir le prix total du panier. Il utilise la methode reduce qui parcourt l'array d'items,
+// et accumule le prix de chaque item à chaque itération.
 export const selectBasketTotal = (state) =>
   state.basket.items.reduce((total, item) => (total += item.price), 0);
 

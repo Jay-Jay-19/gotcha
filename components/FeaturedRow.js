@@ -40,7 +40,7 @@ const FeaturedRow = ({ id, title, description }) => {
 
       <View className="mt-4 flex-row items-center justify-between px-4">
         <Text className="font-bold text-lg">{title}</Text>
-        <ArrowRightIcon color="#004AAD"/>
+        <ArrowRightIcon color="#ff3131"/>
       </View>
 
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
