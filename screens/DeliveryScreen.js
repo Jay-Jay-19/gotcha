@@ -17,18 +17,18 @@ const DeliveryScreen = () => {
     <View className="bg-[#ED2939] flex-1">
       <SafeAreaView className="z-50">
         <View className="flex-row justify-between items-center p-5">
-          <Text className="text-white font-light text-lg">Aide sur la commande</Text>
+          <Text className="text-white font-light">Aide sur la commande</Text>
           <TouchableOpacity onPress={() => navigation.navigate("Home")}>
             <XCircleIcon color="white" size={28} />
           </TouchableOpacity>
         </View>
 
-        <View className="bg-[#004AAD] mx-5 my-2 rounded-md p-6 z-50 shadow-lg">
+        <View className="bg-[#004AAD] mx-5 my-2 rounded-md p-5 z-50 shadow-lg">
 
           <View className="flex-row justify-between">
             <View>
-              <Text className="text-lg text-white">Arrivée de la commande</Text>
-              <Text className="text-4xl font-bold text-white">30-45 minutes</Text>
+              <Text className="text-white">Arrivée de la commande</Text>
+              <Text className="text-2xl font-bold text-white mt-2">30-45 minutes</Text>
             </View>
 
             <Image
@@ -53,7 +53,7 @@ const DeliveryScreen = () => {
             latitudeDelta: 0.01,
             longitudeDelta: 0.01,
           }}
-          className="flex-1 -mt-10 z-0"
+          className="flex-1 -mt-44 z-0"
           mapType="mutedStandard"
         >
           <Marker
@@ -67,20 +67,20 @@ const DeliveryScreen = () => {
           />
         </MapView>
         
-        <SafeAreaView className="bg-[#ED2939] flex-row items-center space-x-5 h-24 pb-5">
+        <SafeAreaView className="bg-[#ED2939] flex-row items-center space-x-5 h-20 pb-5">
           <Image
-            source={require("../assets/deliveryGuy.jpg")}
+            source={require("../assets/deliveryGirl.png")}
             className="h-12 w-12 rounded-full p-4 ml-5"
           />
 
           <View className="flex-1">
-            <Text className="text-lg text-white font-bold">
-              Abelson LeBogosse
+            <Text className="text-white font-bold">
+              Coriandre Davignon
             </Text>
-            <Text className="text-[#0047AB]">Votre livreur</Text>
+            <Text className="text-[#0047AB]">Votre livreuse</Text>
           </View>
 
-          <Text className="text-white text-lg mr-5">Appeler</Text>
+          <Text className="text-white mr-5">Appeler</Text>
         </SafeAreaView>
     </View>
   );
