@@ -28,18 +28,18 @@ const DeliveryScreen = () => {
           <View className="flex-row justify-between">
             <View>
               <Text className="text-white">Arrivée de la commande</Text>
-              <Text className="text-2xl font-bold text-white mt-2">30-45 minutes</Text>
+              <Text className="text-xl font-bold text-white">30-45 minutes</Text>
             </View>
 
             <Image
               source={require("../assets/scooter.gif")}
-              className="h-20 w-16"
+              className="h-16 w-16 mr-6"
             />
           </View>
 
           <Progress.Bar size={30} color="lightgray" indeterminate={true}/>
 
-          <Text className="mt-3 text-white italic">
+          <Text className="mt-3 text-xs text-white italic">
             Votre commande chez {restaurant.title} est en cours de préparation.
           </Text>
 
