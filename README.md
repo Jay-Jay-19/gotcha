@@ -62,15 +62,15 @@ You will need :
 <!-- USAGE -->
 ## 🥋 USAGE
 
-To launch the project, you'll first have to __start the server__ with this command:
+To launch the project, you'll first have to __start the server__ with this command :
 
 `npx expo start`  
 
 A QR code will appear on the terminal :
 
-![Expo_screen2](https://github.com/Jay-Jay-19/gotcha/assets/135040221/2acbb32f-3b7b-4e6d-bc6e-c712333186be)
+![Expo_screen2](https://github.com/Jay-Jay-19/gotcha/assets/135040221/3ee5bafc-6f7d-42a4-bce8-adaaef49dac5)
 
-Then, open the expo app on your phone and scan the QR code.
+Then, open the __Expo__ app on your phone and scan the QR code.
 
 <!-- DOCUMENTATION -->
 ## 📚 DOCUMENTATION
