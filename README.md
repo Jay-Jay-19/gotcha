@@ -17,7 +17,7 @@
 <!-- ABOUT THE PROJECT -->
 ## ✨ ABOUT THE PROJECT
 <p>
-  I wanted to learn React Native by creating my very first mobile app. I like food so it was only natural that I tried to make a food delivery application 🤤 <br />
+  I wanted to learn React Native by creating my very first mobile app. Since I love food, it was only natural that I tried to make a food delivery application 🤤 <br />
   
   What I learned and implemented over the course of this project :<br />
   
