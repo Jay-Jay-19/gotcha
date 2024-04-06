@@ -29,13 +29,7 @@
 
 ### DEMO
 
-https://github.com/Jay-Jay-19/orange-estate/assets/135040221/80e5fa16-e2a5-45f7-b0d2-93845e9314b5
-
-<p align="center">
-<img src="https://github.com/Jay-Jay-19/orange-estate/assets/135040221/019b88b7-fa5a-4306-a50f-8289157680f2" width=3% height=3%>
-</p>
-
-$${\color{red}Tip \space : \space activate \space sound \space for \space better \space experience \space !}$$
+![video coming soon (Téléphone)](https://github.com/Jay-Jay-19/gotcha/assets/135040221/8029123d-63c0-4f3d-bc53-16995c1eaa46)
 
 ### BUILT WITH
 - ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
