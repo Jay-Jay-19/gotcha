@@ -21,25 +21,13 @@
   
   What I learned and implemented over the course of this project :<br />
   
-  🔑 Relational database: thanks to Sanity, a powerful and efficient content platform that serves as the backend.<br />
-  📱🔄🖥️ Cross-platform coding: thanks to React Native, only one codebase is developped for web app, Android and iOS.<br />
-  🏪 App state management: thanks to Redux and its 3 core concepts, Store / Action / Reducers.<br />
-  💫 Seamless navigation between all the app screens: thanks to React Navigation library.
+- 🔑 Relational database : thanks to Sanity, a powerful and efficient content platform that serves as the backend.<br />
+- 📱🔄🖥️ Cross-platform coding : thanks to React Native, only one codebase is developped for web app, Android and iOS.<br />
+- 🏪 App state management : thanks to Redux and its 3 core concepts, Store / Action / Reducers.<br />
+- 💫 Seamless navigation between all the app screens : thanks to React Navigation library.
 </p>
 
 ### DEMO
-
-### Navigation & Search
-
-https://github.com/Jay-Jay-19/orange-estate/assets/135040221/f73b10f8-19ce-47d2-902c-847d35bb05e8
-
-<p align="center">
-<img src="https://github.com/Jay-Jay-19/orange-estate/assets/135040221/019b88b7-fa5a-4306-a50f-8289157680f2" width=3% height=3%>
-</p>
-
-$${\color{orange}Tips \space : \space activate \space sound \space for \space better \space experience \space !}$$
-
-### Search bar, Authentication & Listing creation
 
 https://github.com/Jay-Jay-19/orange-estate/assets/135040221/80e5fa16-e2a5-45f7-b0d2-93845e9314b5
 
@@ -47,17 +35,7 @@ https://github.com/Jay-Jay-19/orange-estate/assets/135040221/80e5fa16-e2a5-45f7-
 <img src="https://github.com/Jay-Jay-19/orange-estate/assets/135040221/019b88b7-fa5a-4306-a50f-8289157680f2" width=3% height=3%>
 </p>
 
-$${\color{orange}Tips \space : \space activate \space sound \space for \space better \space experience \space !}$$
-
-### Responsive design
-
-https://github.com/Jay-Jay-19/orange-estate/assets/135040221/7b7d2f3a-5251-4ae5-82ca-7aabf0fbc8b4
-
-<p align="center">
-<img src="https://github.com/Jay-Jay-19/orange-estate/assets/135040221/019b88b7-fa5a-4306-a50f-8289157680f2" width=3% height=3%>
-</p>
-
-$${\color{orange}Tips \space : \space activate \space sound \space for \space better \space experience \space !}$$
+$${\color{red}Tips \space : \space activate \space sound \space for \space better \space experience \space !}$$
 
 ### BUILT WITH
 - ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
@@ -71,7 +49,10 @@ $${\color{orange}Tips \space : \space activate \space sound \space for \space be
 Clone down this repository.
 
 ### Prerequisites
-You will need `node`, `npm` and installed globally on your machine.  
+You will need :
+
+- `node` and `npm` installed globally on your machine.
+- `expo` installed on your mobile phone.
 
 ### Installation
 
@@ -85,9 +66,11 @@ To launch the project, you'll first have to __start the server__ with this comma
 
 `npx expo start`  
 
-Then, you'll be able to __visit the app__ at:
+A QR code will appear on the terminal :
 
-`localhost:3000`
+![Expo_screen2](https://github.com/Jay-Jay-19/gotcha/assets/135040221/2acbb32f-3b7b-4e6d-bc6e-c712333186be)
+
+Then, open the expo app on your phone and scan the QR code.
 
 <!-- DOCUMENTATION -->
 ## 📚 DOCUMENTATION
