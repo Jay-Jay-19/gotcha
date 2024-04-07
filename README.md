@@ -66,7 +66,7 @@ A QR code will appear on the terminal :
 
 Then, open the __Expo Go__ app on your phone and scan the QR code.
 
-![ExpoGo-MD](https://github.com/Jay-Jay-19/gotcha/assets/135040221/4c7755b0-6e69-485e-bff0-3169577d796f)
+![ExpoGo](https://github.com/Jay-Jay-19/gotcha/assets/135040221/07486158-5629-4ac0-88a7-7d93f7a28fea)
 
 <!-- DOCUMENTATION -->
 ## 📚 DOCUMENTATION
