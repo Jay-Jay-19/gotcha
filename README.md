@@ -21,10 +21,10 @@
   
   What I learned and implemented over the course of this project :<br />
   
-- 🔑 Relational database : thanks to Sanity, a powerful and efficient content platform that serves as the backend.<br />
-- 📱🔄🖥️ Cross-platform coding : thanks to React Native, only one codebase is developped for web app, Android and iOS.<br />
-- 🏪 App state management : thanks to Redux and its 3 core concepts, Store / Action / Reducers.<br />
-- 💫 Seamless navigation between all the app screens : thanks to React Navigation library.
+- 🔑 __Relational database__ : thanks to Sanity, a powerful and efficient content platform that serves as the backend.<br />
+- 📱🔄🖥️ __Cross-platform coding__ : thanks to React Native, only one codebase is developped for web app, Android and iOS.<br />
+- 🏪 __App state management__ : thanks to Redux and its 3 core concepts, Store / Action / Reducers.<br />
+- 💫 __Seamless navigation between all the app screens__ : thanks to React Navigation library.
 </p>
 
 ### DEMO
