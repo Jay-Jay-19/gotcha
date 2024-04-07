@@ -46,7 +46,7 @@ Clone down this repository.
 You will need :
 
 - `node` and `npm` installed globally on your machine.
-- `expo` installed on your mobile phone.
+- `Expo Go` installed on your mobile phone.
 
 ### Installation
 
@@ -64,7 +64,9 @@ A QR code will appear on the terminal :
 
 ![Expo_screen2](https://github.com/Jay-Jay-19/gotcha/assets/135040221/3ee5bafc-6f7d-42a4-bce8-adaaef49dac5)
 
-Then, open the __Expo__ app on your phone and scan the QR code.
+Then, open the __Expo Go__ app on your phone and scan the QR code.
+
+![ExpoGo-MD](https://github.com/Jay-Jay-19/gotcha/assets/135040221/4c7755b0-6e69-485e-bff0-3169577d796f)
 
 <!-- DOCUMENTATION -->
 ## 📚 DOCUMENTATION
